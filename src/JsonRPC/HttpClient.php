@@ -286,7 +286,7 @@ class HttpClient
                 }
             ));
             if ($this->sslLocalCert !== null) {
-                curl_setopt($ch, CURLOPT_CAINFO, $this->sslLocalCert);
+                curl_setopt($ch, CURLOPT_SSLCERT, $this->sslLocalCert);
             }
             $response = curl_exec($ch);
             curl_close($ch);
